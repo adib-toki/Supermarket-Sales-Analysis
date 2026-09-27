@@ -1,0 +1,43 @@
+import numpy as np
+import pandas as pd
+data = pd.read_csv("supermarket_sales.csv")
+#print(pd.DataFrame(data))
+data.dropna()
+data["Revenue"] = data["Unit_Price"]*data["Quantity"]
+#Task 1
+print("=====Data Overview=====")
+print("Total Orders:",np.size(data["Invoice_ID"]))
+print("Total Product Lines:",len(data["Product_Line"].unique()))
+print("Total Quantity Sold:",np.sum(data["Quantity"]))
+print("Total Revenue:",np.sum(data["Revenue"]))
+print("Number of Branches:",data["Branch"].unique())
+print("Number of Payment Methods:",data["Payment"].unique())
+#Task 2
+print("=====Branch Performance=====")
+print("-----Revenue by Branch-----")
+a = data.groupby("Branch")["Revenue"].sum()
+print(a)
+print("-----Quantity by Branch-----")
+b = data.groupby("Branch")["Quantity"].sum()
+print(b)
+print("Best-performing Branch:",b.idxmax())
+print("Lowest-performing Branch:",b.idxmin())
+#Task 3
+print("=====Product Line Performance=====")
+print("-----Revenue by Product Line-----")
+c = data.groupby("Product_Line")["Revenue"].sum()
+print(c)
+print("-----Quantity by Product Line-----")
+d = data.groupby("Product_Line")["Quantity"].sum()
+print(d)
+print("Best-performing Product Line:",c.idxmax())
+print("Lowest-performing Product Line:",c.idxmin())
+print("Highest-selling Product Line by Quantity:",d.idxmax())
+#Task 4
+print("=====Payment Method Analysis=====")
+print("-----Number of orders by Payment Method-----")
+print(data["Payment"].value_counts())
+print("-----Revenue by Payment Method-----")
+e = data.groupby("Payment")["Revenue"].sum()
+print(e)
+print("Most-used Payment Method:",e.idxmax())

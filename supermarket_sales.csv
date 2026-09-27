@@ -1,0 +1,21 @@
+Invoice_ID,Branch,Product_Line,Unit_Price,Quantity,Payment
+INV001,A,Food and Beverages,120,5,Cash
+INV002,B,Electronic Accessories,850,2,Credit Card
+INV003,A,Health and Beauty,450,3,Ewallet
+INV004,C,Home and Lifestyle,700,4,Cash
+INV005,B,Sports and Travel,1200,2,Ewallet
+INV006,C,Food and Beverages,150,8,Credit Card
+INV007,A,Electronic Accessories,900,3,Cash
+INV008,B,Health and Beauty,500,5,Credit Card
+INV009,C,Home and Lifestyle,650,2,Ewallet
+INV010,A,Sports and Travel,1100,4,Cash
+INV011,B,Food and Beverages,180,10,Ewallet
+INV012,C,Electronic Accessories,800,3,Credit Card
+INV013,A,Health and Beauty,550,6,Cash
+INV014,B,Home and Lifestyle,750,5,Ewallet
+INV015,C,Sports and Travel,1300,2,Credit Card
+INV016,A,Food and Beverages,200,7,Ewallet
+INV017,B,Electronic Accessories,950,4,Cash
+INV018,C,Health and Beauty,480,8,Credit Card
+INV019,A,Home and Lifestyle,720,3,Ewallet
+INV020,B,Sports and Travel,1150,6,Cash
